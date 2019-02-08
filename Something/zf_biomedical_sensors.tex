@@ -238,7 +238,7 @@ harmonic solution: $u(z,t)=\tilde u (z)\cdot  e^{i \omega t}$ $\implies -\omega 
 \emph{Solution to (1):} $\tilde u (z)=u_1 e^{kz}+u_2 e^{-kz}$\\
 \textbf{Crystal of thickness l in vacuum:} $\omega _n=n \underbrace{\frac{\pi}{l}\sqrt{\frac{\mu}{\rho}}}_{\omega _0}$, $n=0,1,2,..$\\
 \textbf{In water:} $\omega _n =n\cdot \omega _0+\Delta \omega _n$, $\Delta \omega _n = -\sqrt{n}\cdot \sqrt{\frac{\rho _w \cdot \eta _w \cdot \omega _0}{2}}\cdot \frac{1}{l\cdot \rho _q}$
-\subsection{Quartz Crystal Mycrobalance}
+\subsection{Quartz Crystal Microbalance}
 \textbf{Piezoelectric effect:} Piezoelectricity is the electric charge that accumulates in certain solid materials (such as crystals, certain ceramics, and biological matter such as bone, DNA and various proteins) in response to applied mechanical stress.\\
 Can use this effect to make the crystal resonate at resonance frequency \eqbox{f=\frac{n\cdot v}{\lambda}=\frac{n\cdot v}{2t}}.\\
  If a mass is added, the oscillation slows down: $\Delta m=Const\cdot \Delta f$
@@ -445,10 +445,10 @@ In nanowires:  $k_{el}(x)=k_{el}^0\cdot e^{-\beta x}$ $\rightarrow$ exponential 
  \eqbox{\textbf{Nernst Equation: }\Delta \varphi= \Delta \varphi _c ^0-\frac{RT}{nF}\cdot ln(Q)}, with $R=N_A k_B$, $Q=\frac{[Red]}{[Ox]}$\\
  \grey{General Nernst equation for $A\cdot ox +B\cdot X+z\cdot  e^- \underset{k_{ox}}{\stackrel{k_{red}}\rightleftharpoons} C\cdot  red+ D \cdot  Y$:}\\
  \eqbox{E=E^0 + \frac{R\cdot T\cdot 2.303}{F\cdot Z}\log (\frac{a_{ox}^A\cdot a_X^B}{a_{red}^C\cdot a_Y^D})}\\
-  $a_{ion}=r_{ion}\cdot [ion]/1\frac{mol}{L}$ (activity coeff r often 1), $a_{gas} = p_{gas}/1.1013bar$, $a_{solid} =1$, \grey{$\frac{R\cdot T\cdot 2.303}{F\cdot z}=0.059V$ at $ 25ºC$}\\
+  $a_{ion}=r_{ion}\cdot [ion]/1\frac{mol}{L}$ (activity coeff r often 1), $a_{gas} = p_{gas}/1.1013bar$, $a_{solid} =1$, \grey{$\frac{R\cdot T\cdot 2.303}{F}=0.059V$ at $ 25ºC$}\\
   Nernst for whole cell: $\Delta E= E_1-E_2= E_1^0-E_2^0+\frac{0.059V}{z}\cdot \log (\frac{Q_1}{Q_2})$ if $z_1=z_2$\\
  Reduction: gain of electron, Oxidation: loss of electron\\
- \emph{The reaction of a half cell with a positive potential tends to go towards the reduced side when connected to a half cell with a lower potential}  
+ \emph{The reaction of a half cell with a positive potential tends to go towards the reduced side when connected to a half cell with a lower potential} (i.e. lower potential reduces higher potential)  
  \subsection{Nernst potential at Semipermeable Membranes}
  $j_{diffusion}=-|Z|\cdot D\cdot \frac{d[C]}{dt}$, C: concentration, Z: ion velence, D: diffusion constant \\
  $j_{drift}=-\mu \cdot |Z|\cdot F\cdot [C]\cdot \frac{dV}{dx}$\\
@@ -459,8 +459,8 @@ In nanowires:  $k_{el}(x)=k_{el}^0\cdot e^{-\beta x}$ $\rightarrow$ exponential 
  \textbf{Enzymes: }lower the activation energy ($E_a$ or $\Delta G$) $\rightarrow$ accelerate the rate of the reaction, are not consumed by the reaction and do not alter the equilibrium of these reactions.\\
 Measure the amount of product after enzymatic reaction to know how much of the reactant was initially present.
 \section{Amperometric Sensors}
-\textbf{Cathode: }where cations are reduced - gaining charge\\
-\textbf{Anode: }anions are oxidized - losing charge\\
+\textbf{Cathode: }where cations are reduced - gaining charge (electrons are pushed into the electrolyte)\\
+\textbf{Anode: }anions are oxidized - losing charge (electrons are pulled into the circuit)\\
 \includegraphics[scale=0.2]{Images/redox_current.png}
 \subsection{Faradays Laws: }
 \textbf{First law: }In electrolysis, the quantities of substances involved in the chemical
@@ -468,7 +468,9 @@ change are proportional to the quantity of electricity which passes
 through the electrolyte. (for every electron, something must have been oxidized)\\
 \textbf{Second law: }The masses of different substances set free or dissolved by a given
 amount of electricity are proportional to their chemical equivalents. (e.g.  for $X^{2+}$, need 2 electrons to reduce)\\
-$m=\frac{q\cdot EW }{F}=\frac{i\cdot t\cdot EW}{F}$, $EW=\frac{molecular weight}{valency}$\\
+\textbf{Faradays law of electrolysis: } 
+\eqbox{m=\frac{q\cdot EW }{F}=\frac{i\cdot t\cdot EW}{F}} \\
+$EW=\frac{molecular weight}{valency}$ see \ref{Faradays law of electrolysis} \\
 \textbf{Overpotential: }$\eta = \varphi _S - \varphi _M= \Delta \varphi |_{appl} -\Delta \varphi |_{equil} $ (find  $\Delta \varphi |_{equil}$ with Nernst equation)\\
 at equilibrium, $\eta =0 \implies k_{ox}=k_{red}= k_0$\\
 $k_{red}=k_0 \cdot e^{-n \alpha f \eta}$\\
@@ -476,8 +478,8 @@ $k_{ox}= k_0 e^{n(1-\alpha)f\eta}$		(n= number of $e^-$ exchanged)\\
 $I=nFAk_0[C_{ox}(0,t)e^{-\alpha n f \eta }-C{red}(0,t)e^{(1-alpha)nf\eta}]$ (i is measured by sensor)
 \subsection{Clark electrode}
 The Clark electrode is an electrode that measures ambient oxygen concentration in a liquid using a catalytic platinum surface according to the net reactions:\\
-Ag (anode): $4Ag^0+4Cl^- \rightarrow 4AgCl+4e^-$\\
-Pt (cathode): $O_2+4e^-+4H^+ \rightarrow 2H_2O$\\
+Ag (anode): $4Ag^0+4Cl^- \rightarrow 4AgCl+4e^-$ \\
+Pt (cathode): $O_2+4e^-+4H^+ \rightarrow 2H_2O$ electrons are pushed into the electrolyte\\
 3 types of amperometric sensors:\\
 \includegraphics[scale=0.1]{Images/O2_based_sensor.png}
 \includegraphics[scale=0.1]{Images/mediator_based_sensor.png}
@@ -553,7 +555,7 @@ Average Power: $\bar{P}= \frac{\bar{W}}{T}$
 $A=\epsilon\cdot l\cdot c=-log_{10}(I/I_0)$
 \subsubsection{pH}.\\
 pH$= -\log [H^+] =-\log [H_3 O^+] $ in water
-\subsubsection{Faradays law of electrolysis}.\\
+\subsubsection{Faradays law of electrolysis} \label{Faradays law of electrolysis}.\\
 $\Delta Q= z\cdot F\cdot \Delta [ion]\cdot V$\\
 relates the amount of material produced at an electrode during an electrochemical reaction to the total charge passed or, equivalently, the average current and total time.
 
