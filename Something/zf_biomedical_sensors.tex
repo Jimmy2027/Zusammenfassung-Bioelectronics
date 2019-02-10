@@ -15,6 +15,7 @@
 \usepackage{xspace}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{comment}
 
 \usepackage{titlesec}
 \usepackage{wrapfig}
@@ -291,7 +292,7 @@ Can use this effect to make the crystal resonate at resonance frequency \eqbox{f
 			$\mu_q$=shear modulus of quartz(=$2.947\cdot10^{11}\frac{g}{cm\cdot s^2}$)
  \subsection{Strain gauge transducers}
  Measure change in resistance to measure strain:\\
- $\frac{\Delta R}{R}=K \frac{\Delta l}{l}=K \epsilon$; $\epsilon:$ strain, $K$: Gauge factor ($\approx 2$), R: resistance\\
+ \grey{$\frac{\Delta R}{R}=K \frac{\Delta l}{l}=K \epsilon$}; $\epsilon:$ strain, $K$: Gauge factor ($\approx 2$), R: resistance\\
  Measure change in resistance on nanowires to measure strain: when nano-wire conductor gets elongated, some will lose touch and thus the resistance will go up, can attain extremely high gauge factors by controlling the contact resistance
  \subsubsection{Capacitive strain sensor }.\\
   $C=\epsilon _0 \cdot \epsilon _r \cdot \frac{A}{d}$ $\rightarrow$ change in capacitance will change the resonance frequency of RLC circuit $\omega _0= \frac{1}{\sqrt{LC}}$.\\
@@ -353,6 +354,7 @@ division, muscle contraction, fertilization, blood
 clotting, and synaptic transmission/plasticity $\rightarrow$ measure calcium to measure acitivity\\
 \textbf{Idea:} Design molecules with optical properties that change upon calcium binding.\\
 \textbf{Single wavelength measurements: }\\
+.\\
 $K_d=\frac{[Ca^{2+}]_i\cdot [Unbound\ dye \sim F_{max}-F]}{[Ca^{2+}-bound\ dye \sim F-F_{min}]}$\\
 $\implies [Ca^{2+}]_i =K_d\frac{F-F_{min}}{F_{max}-F}$ with $K_d$: dissociation constant of the indicator, $F_{min}$: fluorescence at zero $Ca^{2+}$ concentration, $F_{max}$: fluorescence at saturating $Ca^{2+}$ levels. \emph{Problem:} need to know the dye concentration\\
 \textbf{Dual-wavelength excitation measurements: } Do two measurements of fluorescence $F_1$ and $F_2$ which are depending on excitation wavelength. $R=\frac{F_1}{F_2}$\\
@@ -503,7 +505,7 @@ $d_2=f_1+f_2$; $d_1=\frac{f_1^2}{f_2}+f_1-d_3(\frac{f_1}{f_2})^2$
 refractive index of the adsorbed protein layer.\\
 \eqbox{\frac{R_p}{R_s}=tan\Psi e^{i\Delta}} R=reflection coefficient\\
 \textbf{Optical Immuno Assay: } Optical film resonates with certain wavelengths, changes with thickness of film.
-\subsection{Surface Plasmon Resonance}
+    \subsection{Surface Plasmon Resonance}
 \begin{wrapfigure}[15]{l}{0.25\textwidth}
 \includegraphics[width=\linewidth]{Images/surface_plasmon_resonance.png}
 \end{wrapfigure}
@@ -514,7 +516,7 @@ A resonant coupling between the light and the surface plasmons in the conducting
 Plasmons lose their energy if their momentum equals that of the incoming wave: $\beta = \frac{\omega}{c}\sqrt{\frac{\epsilon _m \epsilon _d}{\epsilon _m + \epsilon _d}}$\\
 \textbf{Plasmonic hot spot: } Plasmons can also propagate on electron clouds inside a metal $\implies$ if particles close together, plasmons can interact contructively and change $\lambda$ of reflected light
 
-\includegraphics[width=\linewidth]{Images/Surface_Plasmon_Resonance.jpg}
+\includegraphics[width=0.5\linewidth]{Images/Surface_Plasmon_Resonance.jpg}
 
 \textbf{Advantage:} label free, in situ,  imaging possibility(10$\mu m$ lateral resolution), $0.1ng/cm^2$ sensitivity\\
 \textbf{Problems:} requires noble metal surface, measures only one parameter(calibration needed)
@@ -537,15 +539,61 @@ $E_Se^{ik_Sz}$\\
 -sensitivity: $1ng/cm^2$ 
 -requires waveguides 
 
-\section{Molecular Adsorption and Electron Transfer}
-\subsection{Schrödinger Equation}
-$\hbar = \frac{h}{2\pi}=1.055\cdot 10^{-34}\ Js$\\
-$\Psi(r,\theta, \phi)=R(r)\gamma(\theta,\phi)$\\
-Stationary: $\hat{H}\ket{\psi}=E\ket{\psi}$\\
-	time independent: $\hat{H}\ket{\psi}=i \hbar \frac{\partial \ket{\psi}}{\partial t}$\\
-Hamiltonian $H=$ kinetic energy + potential energy $= T+V=-\frac{\hbar ^2}{2m} \Delta ^2+V$\\
-One electron solution (Hydrogen Atom):\\
-$H=T_n + T_e+V{n-e}$ $\implies$ $-\frac{\hbar ^2}{2m}\Delta ^2 \Psi - \frac{Z e^2}{4 \pi \epsilon_0 r}\Psi=E\Psi$, $E=\frac{\hbar ^2 k^2}{2m}$\\
+    \section{Molecular Adsorption and Electron Transfer}
+        \subsection{Schrödinger Equation}
+        $\hbar = \frac{h}{2\pi}=1.055\cdot 10^{-34}\ Js$\\
+        $\Psi(r,\theta, \phi)=R(r)\gamma(\theta,\phi)$\\
+        Stationary: $\hat{H}\ket{\psi}=E\ket{\psi}$\\
+        	time independent: $\hat{H}\ket{\psi}=i \hbar \frac{\partial \ket{\psi}}{\partial t}$\\
+        Hamiltonian $H=$ kinetic energy + potential energy $= T+V=-\frac{\hbar ^2}{2m} \Delta ^2+V$\\
+        One electron solution (Hydrogen Atom):\\
+        $H=T_n + T_e+V{n-e}$ $\implies$ $-\frac{\hbar ^2}{2m}\Delta ^2 \Psi - \frac{Z e^2}{4 \pi \epsilon_0 r}\Psi=E\Psi$, $E=\frac{\hbar ^2 k^2}{2m}$\\
+       
+       
+        
+\begin{comment}
+
+\subsection{Infinite quantum well}
+
+\[
+    V(x)= 
+\begin{cases}
+    0,      & \text{ if } 0<x<a\\
+    \infty, &  x<0 \text{ or } x>a
+\end{cases}
+\]
+\[  \Rightarrow \psi(x)= 0 \text{ if } x<0 \text{ or } x>a\]
+Continuity Condition
+\[ \psi(x)=\psi(a)=0\]
+\includegraphics[width=0.3\columnwidth]{Something/Images/unendlich.JPG}
+
+\begin{enumerate}
+    \item General solution: \\
+    $ \psi(x)= Ae^{ikx}+Be^{-ikx}=A'\sin(kx)+B'\cos(kx)$
+    \item Continuity condition:\\
+     $\psi(x=0) =0 \qquad  \Rightarrow A= -B $
+    $ \Rightarrow \psi(x) = A[e^{ikx}-e^{-ikx}] =A\cdot 2i \cdot sin(ka) $
+    $ \psi(x=a) =0 \Rightarrow k_n=\frac{\pi}{a}n \text{ wobei } n=1, 2, ...$
+    \item Not trivial solution
+    $  \Rightarrow \psi(x) = \text{const} \cdot sin(k_n\cdot x)$
+    \item Normalization
+    $
+        \INT{-\infty}{\infty}{\vert\psi(x,t)\vert^2}{x} = \vert \text A \vert^2 \cdot \INT{0}{a}{sin^2 \left( \frac{n\pi}{a}x \right)}{x}= \vert A \vert^2\cdot\frac{a}{2} \stackrel{!}{=}1 
+    $
+    $ \Rightarrow A= \sqrt{\frac{2}{a}}$
+\end{enumerate}
+
+\textbf{Energy: }
+$  E_n=E_{kin,n,}= \frac{p_n^2}{2m}=\frac{(\hbar k_n)^2}{2m}=\left(\frac{\hbar^2 \pi^2}{2ma^2}\right)n^2 $
+
+\textbf{Nullpunktenergie/tiefst erreichbare Energie:}\\
+$E_{n=1}\neq 0 !$ 
+
+\textbf{Erwartungswert infinite quantum  well}\\
+ $\Braket{x}= \frac{a}{2}$ unabhänging von der Zeit
+\end{comment}
+
+
 Linear combination of atomic orbitals molecular orbital: $\Phi _i= \sum_{k} C_{ij} \Psi{j}$\\
 A= \# electrons in bonding MO\\
 B= \# electrons in anti-bonding MO\\
@@ -575,45 +623,48 @@ In nanowires:  $k_{el}(x)=k_{el}^0\cdot e^{-\beta x}$ $\rightarrow$ exponential 
 
 \section{Potentiometric Biosensors}
 
- \textbf{chemical potential: } 
- \\\eqbox{\mu _j=\Big(\frac{\partial U} {\partial N_i}\Big)_{S,V,N_{j\neq i}} =(\frac{\partial G}{\partial n_j})_{p,T,n'}}, with G the Gibbs free energy\\
-			$dG|_{p,T}=(\mu_B-\mu_A)d\xi$\\ 
- \textbf{Equilibrium} $\rightarrow$ $dG|_{p,T}=0 \implies$ \grey{$\mu _B=\mu _A$}\\
- \textbf{electrochemical potential: }$\bar{\mu _j}=\mu _0 +Z_jF \Delta \phi$ (for a metal, $\mu _0 = E_F$ at T=0K), $F=eN_a$ (Faraday constant)\\
- $\mu _{redox} = E'$ where $D_0(\lambda,E')=D_R(\lambda,E')$\\
- $\Delta \varphi = -\frac{\Delta _r G}{ZF}=C'+C_2\cdot \ln [ion]$; C',$C_2$ constants\\
+     \textbf{chemical potential: } 
+     \\\eqbox{\mu _j=\Big(\frac{\partial U} {\partial N_i}\Big)_{S,V,N_{j\neq i}} =(\frac{\partial G}{\partial n_j})_{p,T,n'}}, with G the Gibbs free energy\\
+    			$dG|_{p,T}=(\mu_B-\mu_A)d\xi$\\ 
+     \textbf{Equilibrium} $\rightarrow$ $dG|_{p,T}=0 \implies$ \grey{$\mu _B=\mu _A$}\\
+     \textbf{electrochemical potential: }$\bar{\mu _j}=\mu _0 +Z_jF \Delta \phi$ (for a metal, $\mu _0 = E_F$ at T=0K), $F=eN_a$ (Faraday constant)\\
+     $\mu _{redox} = E'$ where $D_0(\lambda,E')=D_R(\lambda,E')$\\
+     $\Delta \varphi = -\frac{\Delta _r G}{ZF}=C'+C_2\cdot \ln [ion]$; C',$C_2$ constants\\
+     
+     \eqbox{\textbf{Nernst Equation: }\Delta \varphi= \Delta \varphi _c ^0-\frac{RT}{nF}\cdot ln(Q) = C_1+C_2\ln(a_{ion})}, \\with $R=N_A k_B$, $Q=\frac{[Red]}{[Ox]}$\\
+     
+     
+     \grey{General Nernst equation for $A\cdot ox +B\cdot X+z\cdot  e^- \underset{k_{ox}}{\stackrel{k_{red}}\rightleftharpoons} C\cdot  red+ D \cdot  Y$:}\\
+     \eqbox{E=E^0 + \frac{R\cdot T\cdot 2.303}{F\cdot Z}\log (\frac{a_{ox}^A\cdot a_X^B}{a_{red}^C\cdot a_Y^D})} ($\ln (Q)=2.303\cdot  \log (Q)$)\\ 
+      $a_{ion}=r_{ion}\cdot [ion]/1\frac{mol}{L}$ (activity coeff r often 1), $a_{gas} = p_{gas}/1.1013bar$, $a_{solid} =1$, \grey{$\frac{R\cdot T\cdot 2.303}{F}=0.059V$ at $ 25ºC$}\\
+      Nernst for whole cell: $\Delta E= E_1-E_2= E_1^0-E_2^0+\frac{0.059V}{z}\cdot \log (\frac{Q_1}{Q_2})$ if $z_1=z_2$\\
+     Reduction: gain of electron, Oxidation: loss of electron\\
+     \emph{The reaction of a half cell with a positive potential tends to go towards the reduced side when connected to a half cell with a lower potential} (i.e. lower potential reduces higher potential)  
+     \includegraphics[width=0.8\linewidth]{Something/Images/Small_Redox_Table.png}
+        \subsection{Nernst potential at Semipermeable Membranes}
+             $j_{diffusion}=-|Z|\cdot D\cdot \frac{d[C]}{dt}$, C: concentration, Z: ion valence, D: diffusion constant \\
+             $j_{drift}=-\mu \cdot |Z|\cdot F\cdot [C]\cdot \frac{dV}{dx}$\\
+             Einstein relation:  $D=\frac{k_BT\mu}{Q}$\\
+             $\implies$ \eqbox{\Delta \varphi = V_{in}-V_{out}=\frac{k_bT}{Q}\cdot \ln {\frac{[C]_{out}}{[C]_{in}}}}\\ 
+             $V\cdot c_t(\inf)=V\cdot c_t(0) $\\
+             Osmotic equilibrium: $c_1(\inf)=c_2(\inf)$
+        \subsection{Ion-Selective Electrodes}
+             $\Delta \varphi _m = \frac{RT}{ZF} \ln (\frac{[a_A]_1}{[a_A]_2})$
+         
  
- \eqbox{\textbf{Nernst Equation: }\Delta \varphi= \Delta \varphi _c ^0-\frac{RT}{nF}\cdot ln(Q) = C_1+C_2\ln(a_{ion})}, \\with $R=N_A k_B$, $Q=\frac{[Red]}{[Ox]}$\\
- 
- 
- \grey{General Nernst equation for $A\cdot ox +B\cdot X+z\cdot  e^- \underset{k_{ox}}{\stackrel{k_{red}}\rightleftharpoons} C\cdot  red+ D \cdot  Y$:}\\
- \eqbox{E=E^0 + \frac{R\cdot T\cdot 2.303}{F\cdot Z}\log (\frac{a_{ox}^A\cdot a_X^B}{a_{red}^C\cdot a_Y^D})} ($\ln (Q)=2.303\cdot  \log (Q)$)\\ 
-  $a_{ion}=r_{ion}\cdot [ion]/1\frac{mol}{L}$ (activity coeff r often 1), $a_{gas} = p_{gas}/1.1013bar$, $a_{solid} =1$, \grey{$\frac{R\cdot T\cdot 2.303}{F}=0.059V$ at $ 25ºC$}\\
-  Nernst for whole cell: $\Delta E= E_1-E_2= E_1^0-E_2^0+\frac{0.059V}{z}\cdot \log (\frac{Q_1}{Q_2})$ if $z_1=z_2$\\
- Reduction: gain of electron, Oxidation: loss of electron\\
- \emph{The reaction of a half cell with a positive potential tends to go towards the reduced side when connected to a half cell with a lower potential} (i.e. lower potential reduces higher potential)  
- \subsection{Nernst potential at Semipermeable Membranes}
- $j_{diffusion}=-|Z|\cdot D\cdot \frac{d[C]}{dt}$, C: concentration, Z: ion valence, D: diffusion constant \\
- $j_{drift}=-\mu \cdot |Z|\cdot F\cdot [C]\cdot \frac{dV}{dx}$\\
- Einstein relation:  $D=\frac{k_BT\mu}{Q}$\\
- $\implies$ \eqbox{\Delta \varphi = V_{in}-V_{out}=\frac{k_bT}{Q}\cdot \ln {\frac{[C]_{out}}{[C]_{in}}}}\\ 
- \subsection{Ion-Selective Electrodes}
- $\Delta \varphi _m = \frac{RT}{ZF} \ln (\frac{[a_A]_1}{[a_A]_2})$
- 
- 
- \subsection{Bioenzymatic Sensors}
- \textbf{Enzymes: }lower the activation energy ($E_a$ or $\Delta G$) $\rightarrow$ accelerate the rate of the reaction, are not consumed by the reaction and do not alter the equilibrium of these reactions.\\
-Measure the amount of product after enzymatic reaction to know how much of the reactant was initially present.
-\subsection{ph electrode}
-		$pH=\frac{K'-\Delta\varphi}{0.059}$\\
-Gas sensor CO\textsubscript{2}:\\
-			$H_2CO_3\rightleftharpoons HCO_3^-+H^+$\\
-			$K=\frac{[H^+][HCO_3^-]}{[H_2CO_3]}$\enspace\enspace $pH=pK+ln\frac{[HCO_3^-]}{[H_2CO_3]}$
+        \subsection{Bioenzymatic Sensors}
+             \textbf{Enzymes: }lower the activation energy ($E_a$ or $\Delta G$) $\rightarrow$ accelerate the rate of the reaction, are not consumed by the reaction and do not alter the equilibrium of these reactions.\\
+            Measure the amount of product after enzymatic reaction to know how much of the reactant was initially present.
+        \subsection{ph electrode}
+        		$pH=\frac{K'-\Delta\varphi}{0.059}$\\
+        Gas sensor CO\textsubscript{2}:\\
+        			$H_2CO_3\rightleftharpoons HCO_3^-+H^+$\\
+        			$K=\frac{[H^+][HCO_3^-]}{[H_2CO_3]}$\enspace\enspace $pH=pK+ln\frac{[HCO_3^-]}{[H_2CO_3]}$
 \section{Amperometric Sensors}
-\textbf{Cathode: }where cations are reduced - gaining charge (electrons are pushed into the electrolyte)\\
-\textbf{Anode: }anions are oxidized - losing charge (electrons are pulled into the circuit)\\
-\includegraphics[scale=0.2]{Images/redox_current.png}
-\subsection{Faradays Laws: }
+    \textbf{Cathode: }where cations are reduced - gaining charge (electrons are pushed into the electrolyte)\\
+    \textbf{Anode: }anions are oxidized - losing charge (electrons are pulled into the circuit)\\
+    \includegraphics[scale=0.2]{Images/redox_current.png}
+        \subsection{Faradays Laws: }
 \textbf{First law: }In electrolysis, the quantities of substances involved in the chemical
 change are proportional to the quantity of electricity which passes
 through the electrolyte. (for every electron, something must have been oxidized)\\
@@ -687,7 +738,7 @@ Pt (cathode): $O_2+4e^-+4H^+ \rightarrow 2H_2O$ electrons are pushed into the el
 		$C_{\sum}(x,t)=\mathrm{osmolarity}\Big[\frac{osmol}{m^3}\Big]$,\\
 		$R=\text{molar gas constant}=8.314J/mol\cdot K$\\\\
     
-\columnbreak
+
 	\subsection{Carrier mediated transport}
 	Carrier mediated transport saturates (elevator analogy), works by competition and is structure dependent/ not formula dependent\\
         Binding $\rightarrow$ translocation $\rightarrow$ release $\rightarrow$ reset \\
@@ -718,6 +769,7 @@ Pt (cathode): $O_2+4e^-+4H^+ \rightarrow 2H_2O$ electrons are pushed into the el
 		$J_{Na}{+}J_K{+}J_o=0$\\
 		$J_m=0$\\
 		$V_m{=}\frac{V_{Na}G_{Na}}{G_{tot}}{+}\frac{V_KG_K}{G_{tot}}{+}\frac{V_oG_o}{G_{tot}}$\\
+		$J_{NA/K}=G_{NA/K}(V_m-V_{NA/K})$\\
 		\\\\
 		.\\
 Potassium is the dominant ion (highest conductance), sodium has only a small effect, all other ion lumped together in $V_0,G_0$\\
@@ -726,7 +778,8 @@ Potassium is the dominant ion (highest conductance), sodium has only a small eff
 		-now we have both $J_m=0$ and quasi-equilibrium $J_n^a+J_n^p=0$ 
 	
 		
-		\section{Action potential \& Hodgkin and Huxley Model}
+\section{Action potential \& Hodgkin and Huxley Model}
+		"Clamp" refers to keeping a parameter constant. In \textbf{current clamp}, the current passing across the membrane is controlled experimentally, and the membrane voltage changes that take place are measured. In \textbf{voltage clamp}, the membrane voltage is controlled experimentally, and the current passing across the membrane is measured.
 		\subsection{Hodgkin Huxley Model}
 
 			 state variables:$V_m(t),n(t),m(t),h(t)$\\
@@ -747,7 +800,9 @@ Potassium is the dominant ion (highest conductance), sodium has only a small eff
 	            &h(t=0)=h_{\infty}(V_m^0)
 			\end{aligned}
 			}\\
-			$J_m(t)=J_C+J_{Na}+J_K+J_L+J_{ext}=\\C_m\frac{dV_m(t)}{dt}+G_{Na}(V_m,t)\cdot(V_m(t)-V_{Na})+G_K(V_m,t)\cdot(V_m(t)-V_K)+G_L\cdot(V_m(t)-V_L)+J_{ext}=0$\\
+			$J_m(t)=J_C+J_{Na}+J_K+J_L+J_{ext}=\\C_m\frac{dV_m(t)}{dt}+G_{Na}(V_m,t)
+			\cdot(V_m(t)-V_{Na})+G_K(V_m,t)\cdot(V_m(t)-V_K)+G_L\cdot(V_m(t)-V_L)+J_{ext}
+			=0$\\
 			\boxed{
 			\begin{aligned}
 				&\alpha_m=\frac{-0.1(V_m+35)}{e^{-0.1(V_m+35)}-1}K_T\\
@@ -765,9 +820,15 @@ Potassium is the dominant ion (highest conductance), sodium has only a small eff
 				\tau_n=\frac{1}{\alpha_n+\beta_n} , n_{\infty}=\frac{\alpha_n}{\alpha_n+\beta_n}	
 			\end{aligned}
 			}\\
-			Standard parameters:$\bar{G}_{Na}=120,\bar{G}_K=36, G_L=0.3mS/cm^2,\\C_m=1\mu F/cm^2,c_{Na}^o=491,
-			c_{Na}^o=20.11,c_K^i=400 mmol/L, \\V_L=-49mV, temperature=6.3^\circ C$\\
+			Standard parameters:$\bar{G}_{Na}=120,\bar{G}_K=36, G_L=0.3mS/cm^2,\\C_m=1\mu F/cm^2,c_{Na}^o=491, c_{Na}^i=50,
+			c_{K}^o=20.11,c_K^i=400 mmol/L, \\V_L=-49mV, temperature=6.3^\circ C$\\
 		temperature factor:$K_T=3^{(T_C-6.3)/10}$\\
+		\textbf{higher temperature: }- action potential dynamics will be faster and amplitude
+        will get smaller. 
+        - reduces the amplitude of the sodium conductance relative to
+        the potassium conductance at the peak of the action potential\\
+        And for \textbf{low temperatures} the action potential
+dynamics will get slower and will not fire that frequently.
 		$V_n=\frac{R(T_C+273.16)}{z_nF}ln\Big(\frac{c_n^o}{c_n^i}\Big)$
 	
 		
@@ -800,8 +861,8 @@ $G_{NA}$: 3 (fast -higher positively charged) activating gates + 1 (slowly -low 
 		IV:Post-AP refractory period\\
 \includegraphics[width=0.8\linewidth]{Something/Images/sodium_potassium_gates.png}\\
 		\textbf{Resting Potential of neuron: }results from a higher concentration of sodium on the outside and a higher concentration of potassium on the inside due to the \emph{Sodium-Potassium pump}. In total there is a higher concentration of positive charges on the outside than on the inside.\\
-					
-		\section{Core conductor model}
+		\textbf{Node of Ranvier: }a natural gap in the myelin sheath along the axon. These unmyelinated spaces are about one micrometer long and contain voltage gated Na+ and K+ channels. The flow of ions through these channels, particularly the Na+ channels, slows the action potential down but regenerates it over and over again along the axon.		
+\section{Core conductor model}
 
 The speed of conduction is improved with a myelin sheet (keeps current in axons) and the AP is regenerated through the nodes of Ranvier\\ 
 		\includegraphics[width=0.8\linewidth]{Images/core-conductor.png}
@@ -816,8 +877,11 @@ The speed of conduction is improved with a myelin sheet (keeps current in axons)
 		}\\
 		$r_i$=inner resistance per unit length\\
 		$r_o$=outer resistance per unit length\\
-		$K_m$=current per unit length		
+		$K_m$=current per unit length\\
+		$K_e$=external current that is applied\\
+		$V_m(z,t)=V_i(z,t)-V_o(z,t)$
 		\\
+		$\frac{\partial V_m(z,t)}{\partial z}=-r_iI_i(z,t)+r_oI_o(z,t)$\\
 		\eqbox{\frac{\partial^2V_m(z,t)}{\partial z^2}=(r_o+r_i)K_m(z,t)-r_oK_e(z,t)}\\
 		velocity of AP: $v=\sqrt{\frac{K_m}{(r_i+r_o)2\pi a}}\approx\sqrt{\frac{K_m a}{2\rho_i}}$\\
 		$\rho_i$=resistivity\\
@@ -919,7 +983,7 @@ Duffusion constant: $D= \mu \,  k_B\, T$\\
 Electrical mobility equation: $\frac{\mu \, k_b\, T }{q}$\\
 Stokes-Einstein equation: $D=\frac{k_b\, T}{6\pi \,\eta \,R}$\\
 \subsubsection{Conductivity of ionic solutions}.\\
-$\frac{1}{R}=\frac{A}{d}\, C_{ion}\, \lambda _{mol}=\frac{I}{E\cdot d}$\\
+$\frac{1}{R}=\frac{A}{d}\, C_{ion}\, \lambda _{mol}=\frac{I}{E\cdot d}$, 
 with $\lambda {mol}$ the molar conductivity
 \end{multicols}
 
